@@ -3,6 +3,16 @@ package com.kl.voucher_pool.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * Represents a special offer in the voucher pool system.
+ * This class is mapped to the "special_offers" collection in the MongoDB database.
+ * 
+ * A special offer contains information about a specific promotion or discount,
+ * including its name and the percentage of discount offered.
+ *
+ * @author [Kuok Lim Goh]
+ * @since [2024-10-21]
+ */
 @Document(collection = "special_offers")
 public class SpecialOffer {
     @Id

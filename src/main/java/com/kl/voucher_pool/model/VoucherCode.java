@@ -5,6 +5,17 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+/**
+ * Represents a voucher code in the voucher pool system.
+ * This class is mapped to the "voucher_codes" collection in the MongoDB database.
+ * 
+ * A voucher code contains information about a specific voucher, including its unique code,
+ * the recipient it's assigned to, the special offer it's associated with, its expiration date,
+ * and the date it was used (if applicable).
+ *
+ * @author [Kuok Lim Goh]
+ * @since [2024-10-21]
+ */
 @Document(collection = "voucher_codes")
 public class VoucherCode {
     @Id

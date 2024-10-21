@@ -11,6 +11,16 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * VoucherPoolController handles HTTP requests related to voucher operations.
+ * It provides endpoints for generating, validating, and retrieving vouchers.
+ *
+ * This controller uses VoucherPoolService to perform the business logic
+ * and returns appropriate ResponseEntity objects based on the operation results.
+ *
+ * @author [Kuok Lim Goh]
+ * @since [2024-10-21]
+ */
 @RestController
 @RequestMapping("/api/vouchers")
 public class VoucherPoolController {
@@ -23,6 +33,14 @@ public class VoucherPoolController {
 
     private static final String ERROR_KEY = "error";
 
+    /**
+     * Generates a new voucher code for a recipient with a specified special offer and expiration date.
+     * 
+     * @param email The email of the recipient
+     * @param specialOffer The name of the special offer
+     * @param expirationDate The expiration date of the voucher
+     * @return ResponseEntity containing the generated voucher code
+     */
     @PostMapping("/generate")
     public ResponseEntity<Map<String, Object>> generateVoucher(
             @RequestParam String email,
@@ -36,6 +54,13 @@ public class VoucherPoolController {
         }
     }
 
+    /**
+     * Validates a voucher code for a recipient.
+     * 
+     * @param code The voucher code to validate
+     * @param email The email of the recipient
+     * @return ResponseEntity containing the validation result
+     */
     @PostMapping("/validate")
     public ResponseEntity<Map<String, Object>> validateVoucher(
             @RequestParam String code,
@@ -48,6 +73,12 @@ public class VoucherPoolController {
         }
     }
 
+    /**
+     * Retrieves all valid voucher codes for a recipient.
+     * 
+     * @param email The email of the recipient
+     * @return ResponseEntity containing the list of valid voucher codes
+     */
     @GetMapping("/valid")
     public ResponseEntity<Map<String, Object>> getValidVouchers(@RequestParam String email) {
         try {

@@ -55,7 +55,37 @@ The application uses the following default MongoDB configuration:
 
 ## Initial Data
 
-The application comes with a `DataLoader` that populates initial data for recipients and special offers. This data is loaded automatically when the application starts if the database is empty. You can find a list of the initial data in the `initial_data.txt` file.
+When the application starts for the first time, it automatically loads some sample data into the database. This includes a set of recipients and special offers. Here's a list of the initial data:
+
+### Recipients
+
+| Email             | Name          |
+|-------------------|---------------|
+| john@example.com  | John Doe      |
+| jane@example.com  | Jane Smith    |
+| bob@example.com   | Bob Johnson   |
+
+### Special Offers
+
+| Name              | Discount (%) |
+|-------------------|--------------|
+| Summer Sale       | 20.0         |
+| Winter Discount   | 15.0         |
+| Spring Promotion  | 10.0         |
+
+This initial data is loaded to provide a starting point for testing and development. You can modify or add to this data as needed for your use case.
+
+### Note on Data Loading
+
+When you run the application for the first time, it should automatically load this initial sample data into the MongoDB database. However, in some cases, you might not see this data immediately in your MongoDB viewer. If this occurs, please try the following steps:
+
+1. Ensure the application has fully started and there are no errors in the console logs.
+2. Check the application logs for messages indicating that sample data has been loaded.
+3. If you're using a MongoDB viewer or GUI tool, try refreshing the database connection.
+4. If the data still doesn't appear, restart your MongoDB viewer or reconnect to the database.
+5. As a last resort, you can try stopping the application, clearing the database, and then restarting the application.
+
+If you continue to experience issues with data loading, please check the application logs for any error messages and ensure your MongoDB connection settings are correct.
 
 ## API Endpoints
 
