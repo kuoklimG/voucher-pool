@@ -21,7 +21,7 @@ This project implements a Voucher Pool system using Spring Boot, allowing for th
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/voucher-pool-system.git
+   git clone https://github.com/kuoklimG/voucher-pool.git
    cd voucher-pool-system
    ```
 
