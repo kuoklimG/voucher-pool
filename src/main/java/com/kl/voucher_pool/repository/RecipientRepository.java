@@ -1,6 +1,7 @@
-package com.example.voucherpool.repository;
+package com.kl.voucher_pool.repository;
 
-import com.example.voucherpool.model.Recipient;
+import com.kl.voucher_pool.model.Recipient;
+
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.Optional;

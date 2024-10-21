@@ -1,4 +1,4 @@
-package com.example.voucherpool.model;
+package com.kl.voucher_pool.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -12,9 +12,9 @@ public class Recipient {
     @Indexed(unique = true)
     private String email;
 
-    public Recipient(String name, String email) {
-        this.name = name;
+    public Recipient(String email, String name) {
         this.email = email;
+        this.name = name;
     }
 
     public String getId() {

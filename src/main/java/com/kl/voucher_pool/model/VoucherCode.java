@@ -1,4 +1,4 @@
-package com.example.voucherpool.model;
+package com.kl.voucher_pool.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -13,7 +13,7 @@ public class VoucherCode {
     private String recipientId;
     private String specialOfferId;
     private LocalDate expirationDate;
-    private LocalDate usageDate;
+    private LocalDateTime usageDate;
 
     public VoucherCode(String code, String recipientId, String specialOfferId, LocalDate expirationDate) {
         this.code = code;
@@ -62,11 +62,11 @@ public class VoucherCode {
         this.expirationDate = expirationDate;
     }
 
-    public LocalDate getUsageDate() {
+    public LocalDateTime getUsageDate() {
         return usageDate;
     }
 
-    public void setUsageDate(LocalDate usageDate) {
+    public void setUsageDate(LocalDateTime usageDate) {
         this.usageDate = usageDate;
     }
 }

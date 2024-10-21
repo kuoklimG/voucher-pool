@@ -1,4 +1,4 @@
-package com.example.voucherpool.model;
+package com.kl.voucher_pool.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
