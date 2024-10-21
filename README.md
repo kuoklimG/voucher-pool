@@ -22,10 +22,10 @@ This project implements a Voucher Pool system using Spring Boot, allowing for th
 1. Clone the repository:
    ```
    git clone https://github.com/kuoklimG/voucher-pool.git
-   cd voucher-pool-system
+   cd voucher-pool
    ```
 
-2. Ensure MongoDB is running on your system. By default, the application will try to connect to MongoDB at `mongodb://localhost:27017/voucherpool`. 
+2. Ensure MongoDB is running on your system. By default, the application will try to connect to MongoDB at `mongodb://localhost:27017/voucher_pool`. 
    If your MongoDB setup is different, you'll need to update the connection string in `application.properties`.
 
 3. Build the project:
